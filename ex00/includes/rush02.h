@@ -20,8 +20,9 @@
 
 typedef struct s_dict
 {
-	char *number;
-	char *word;
+	char	*number;
+	char	*word;
+	int		size;
 } t_dict;
 
 // parse_dict
@@ -29,6 +30,7 @@ t_dict	*parse_dict(char *dict_file);
 
 // utils
 int		count_lines(char *dict_file);
+int		ft_strlen(char *str);
 char	*ft_strdup(char *src);
 int		ft_atoi(char *str);
 

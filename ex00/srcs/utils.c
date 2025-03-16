@@ -34,6 +34,16 @@ char	*ft_strdup(char *src)
 	return (dest);
 }
 
+int	ft_strlen(char *str)
+{
+	int len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}
+
 int	count_lines(char *dict_file)
 {
 	int	fd;

@@ -30,6 +30,7 @@ static int	fill_dict_entry(char *buffer, t_dict *dict, int index)
 	}
 	dict[index].number = ft_strdup(number);
 	dict[index].word = ft_strdup(word);
+	dict[index].size = ft_strlen(ft_strdup(number));
 	return (0);
 }
 

@@ -31,9 +31,10 @@ int	main(int argc, char **argv)
 		number = argv[2];
 	}
 	dict = parse_dict(dict_file);
+	(void) number;
 	if (!dict)
 		return (1);
-	printf("number %s\nword: %s\n", dict[39].number, dict[39].word);
+	printf("number %s\nword: %s\nsize: %d\n", dict[39].number, dict[39].word, dict[39].size);
 	free(dict);
 	return (0);
 }

@@ -1,12 +1,13 @@
 # Variáveis
 NAME = rush02
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRCS = \
 	./srcs/main.c \
 	./srcs/parse_dict.c \
-	./srcs/utils.c
+	./srcs/utils.c ./srcs/print_low_numbers.c \
+	./srcs/print_numbers.c
 
 OBJS = $(SRCS:.c=.o)
 

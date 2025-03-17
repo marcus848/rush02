@@ -6,7 +6,7 @@
 /*   By: marcudos <marcudos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 16:31:55 by marcudos          #+#    #+#             */
-/*   Updated: 2025/03/14 16:32:05 by marcudos         ###   ########.fr       */
+/*   Updated: 2025/03/17 11:44:49 by marcudos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,13 @@ int		count_lines(char *dict_file);
 int		ft_strlen(char *str);
 char	*ft_strdup(char *src);
 int		ft_atoi(char *str);
+
+void	print_word(int number, t_dict *dict);
+void	print_units(int n, t_dict *dict);
+void	print_tens(int n, t_dict *dict);
+void	print_hundreds(int n, t_dict *dict);
+
+void	recursive_print(long number, t_dict *dict, int size);
 
 #endif
 

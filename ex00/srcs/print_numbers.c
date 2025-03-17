@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_numbers.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcudos <marcudos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 14:18:01 by marcudos          #+#    #+#             */
-/*   Updated: 2025/03/17 11:44:30 by marcudos         ###   ########.fr       */
+/*   Created: 2025/03/17 11:37:24 by marcudos          #+#    #+#             */
+/*   Updated: 2025/03/17 11:42:30 by marcudos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/rush02.h"
 
-int	main(int argc, char **argv)
+void	recursive_print(long number, t_dict *dict, int size)
 {
-	char	*dict_file;
-	char	*number;
-	t_dict	*dict;
-	int		size;
-
-	if (argc < 2 || argc > 3)
-		return (1);
-	if (argc == 2)
+	if (number <= 999)
 	{
-		dict_file = "numbers.en.dict";
-		number = argv[1];
+		print_hundreds((int)number, dict);
+		if (size > 3)
+		{
+			print_word(size, dict);
+		}
+		return ;
 	}
-	else
+	recursive_print(number / 1000, dict, size - 3);
+	if (number % 1000 > 0)
 	{
-		dict_file = argv[1];
-		number = argv[2];
+		print_hundreds(number % 1000, dict);
+		if (size > 3)
+		{
+			print_word(size, dict);
+		}
 	}
-	dict = parse_dict(dict_file);
-	if (!dict)
-		return (1);
-	size = ft_strlen(number);
-	recursive_print(ft_atoi(number), dict, size);
-	write(1, "\n", 1);
-	free(dict);
-	return (0);
 }

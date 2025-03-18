@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 	if (!dict)
 		return (1);
 	size = ft_strlen(number);
-	recursive_print(ft_atoi(number), dict, size);
+	print_numbers(ft_atoi(number), dict, 0);
 	write(1, "\n", 1);
 	free(dict);
 	return (0);

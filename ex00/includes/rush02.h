@@ -39,7 +39,8 @@ void	print_units(int n, t_dict *dict);
 void	print_tens(int n, t_dict *dict);
 void	print_hundreds(int n, t_dict *dict);
 
-void	recursive_print(long number, t_dict *dict, int size);
+void	print_numbers(long number, t_dict *dict, int size);
+void	print_units_center(int	size, t_dict *dict);
 
 #endif
 

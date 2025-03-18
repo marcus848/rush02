@@ -14,6 +14,11 @@
 
 void	print_numbers(unsigned long long number, t_dict *dict, int size)
 {
+	if (number == 0)
+	{
+		write(1, dict[0].word, ft_strlen(dict[0].word));
+		return ;
+	}
 	if (number <= 999)
 	{
 		print_hundreds((unsigned long long)number, dict);

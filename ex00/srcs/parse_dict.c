@@ -70,8 +70,8 @@ static void	read_dict(int fd, t_dict *dict)
 
 t_dict	*parse_dict(char *dict_file)
 {
-	int fd;
-	int size;
+	int	fd;
+	int	size;
 	t_dict *dict;
 
 	size = count_lines(dict_file);

@@ -63,11 +63,11 @@ int	count_lines(char *dict_file)
 	return (count);
 }
 
-int	ft_atoi(char *str)
+unsigned long long	ft_atoll(char *str)
 {
-	int	i;
-	int	sign;
-	int	num;
+	int			i;
+	int			sign;
+	unsigned long long	num;
 
 	i = 0;
 	sign = 1;
@@ -87,3 +87,4 @@ int	ft_atoi(char *str)
 	}
 	return (num * sign);
 }
+

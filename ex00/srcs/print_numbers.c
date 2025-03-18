@@ -12,11 +12,11 @@
 
 #include "../includes/rush02.h"
 
-void	print_numbers(long number, t_dict *dict, int size)
+void	print_numbers(unsigned long long number, t_dict *dict, int size)
 {
 	if (number <= 999)
 	{
-		print_hundreds((int)number, dict);
+		print_hundreds((unsigned long long)number, dict);
 		if (size > 0)
 		{
 			if (size == 1)

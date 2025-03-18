@@ -12,14 +12,14 @@
 
 #include "../includes/rush02.h"
 
-void	print_word(int number, t_dict *dict)
+void	print_word(unsigned long long number, t_dict *dict)
 {
 	int i;
 
 	i = 0;
 	while (dict[i].number)
 	{
-		if (ft_atoi(dict[i].number) == number)
+		if (ft_atoll(dict[i].number) == number)
 		{
 			write(1, dict[i].word, ft_strlen(dict[i].word));
 			write(1, " ", 1);
@@ -29,12 +29,12 @@ void	print_word(int number, t_dict *dict)
 	}
 }
 
-void	print_units(int n, t_dict *dict)
+void	print_units(unsigned long long n, t_dict *dict)
 {
 	print_word(n, dict);
 }
 
-void	print_tens(int n, t_dict *dict)
+void	print_tens(unsigned long long n, t_dict *dict)
 {
 	if (n < 10)
 		print_units(n, dict);
@@ -48,7 +48,7 @@ void	print_tens(int n, t_dict *dict)
 	}
 }
 
-void	print_hundreds(int n, t_dict *dict)
+void	print_hundreds(unsigned long long n, t_dict *dict)
 {
 	if (n >= 100)
 	{

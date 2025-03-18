@@ -32,14 +32,14 @@ t_dict	*parse_dict(char *dict_file);
 int		count_lines(char *dict_file);
 int		ft_strlen(char *str);
 char	*ft_strdup(char *src);
-int		ft_atoi(char *str);
+unsigned long long	ft_atoll(char *str);
 
-void	print_word(int number, t_dict *dict);
-void	print_units(int n, t_dict *dict);
-void	print_tens(int n, t_dict *dict);
-void	print_hundreds(int n, t_dict *dict);
+void	print_word(unsigned long long number, t_dict *dict);
+void	print_units(unsigned long long n, t_dict *dict);
+void	print_tens(unsigned long long n, t_dict *dict);
+void	print_hundreds(unsigned long long n, t_dict *dict);
 
-void	print_numbers(long number, t_dict *dict, int size);
+void	print_numbers(unsigned long long number, t_dict *dict, int size);
 void	print_units_center(int	size, t_dict *dict);
 
 #endif

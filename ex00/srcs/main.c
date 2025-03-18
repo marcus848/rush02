@@ -17,7 +17,6 @@ int	main(int argc, char **argv)
 	char	*dict_file;
 	char	*number;
 	t_dict	*dict;
-	int		size;
 
 	if (argc < 2 || argc > 3)
 		return (1);
@@ -34,8 +33,7 @@ int	main(int argc, char **argv)
 	dict = parse_dict(dict_file);
 	if (!dict)
 		return (1);
-	size = ft_strlen(number);
-	print_numbers(ft_atoi(number), dict, 0);
+	print_numbers(ft_atoll(number), dict, 0);
 	write(1, "\n", 1);
 	free(dict);
 	return (0);
